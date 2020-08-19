@@ -1,0 +1,30 @@
+* {
+    font-family: "Carter One", cursive;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: dodgerblue;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.nav-item a {
+    margin-top: 7px;
+    &:hover {
+        color: white;
+    }
+}
+
+.nav-item img {
+    margin-bottom: 10px;
+}

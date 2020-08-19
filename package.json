@@ -1,0 +1,24 @@
+{
+  "name": "MemoryZougoulou",
+  "version": "1.0.0",
+  "description": "Projet 2020 - Jeu de mémorisation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEVERECLICK-dev/MemoryZougoulou.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEVERECLICK-dev/MemoryZougoulou/issues"
+  },
+  "homepage": "https://github.com/SEVERECLICK-dev/MemoryZougoulou#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1"
+  }
+}
