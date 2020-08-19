@@ -17,9 +17,9 @@ function startGame() {
         recupContainerMain.style.display = "flex";
         recupContainerMain.style.justifyContent = "center";
         recupContainerMain.style.alignItems = "center";
-        recupContainerMain.style.marginTop = "50px";
         document.getElementById(i).innerHTML += "<img id=grid>" + "</img>";
         document.getElementById("grid").src = "src/images/empty.jpg";
+        document.getElementById("grid").style.borderRadius = "5px";
     }
 }
 
