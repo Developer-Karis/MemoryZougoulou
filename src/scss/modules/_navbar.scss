@@ -4,17 +4,20 @@
 
 body {
     margin: 0;
+    background-image: url("../../src/images/poker-table.jpg");
+    background-repeat: no-repeat;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 3px solid white;
 }
 
 .nav-link {
     color: dodgerblue;
-    padding: 5px;
+    padding: 1.5px;
     font-size: 1.3rem;
 }
 
