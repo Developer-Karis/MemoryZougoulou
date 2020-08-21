@@ -7808,7 +7808,7 @@ body {
 
 .nav-link {
   color: dodgerblue;
-  padding: 1.5px;
+  padding: 0.1px;
   font-size: 1.3rem; }
 
 .nav-item a {
@@ -7821,22 +7821,26 @@ body {
 
 #container-main {
   background-color: dodgerblue;
-  padding: 10px;
   margin: 15px;
   border-radius: 5px;
-  border: 3px solid black; }
+  border: 3px solid black;
+  display: flex;
+  flex-wrap: wrap; }
 
 #container-timer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em; }
+  margin-bottom: -5px; }
+  #container-timer h1 {
+    font-size: 1.8rem;
+    margin-bottom: -10px; }
   #container-timer .row {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 99%; }
+    width: 100%; }
   #container-timer .col img {
     mix-blend-mode: multiply; }
 
@@ -7848,7 +7852,7 @@ body {
   width: 60%;
   margin: auto;
   border: 4px solid black;
-  margin-top: 40px;
+  margin-top: 15px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 10.3px 10.9px rgba(0, 0, 0, 0.072), 0 10.8px 10.4px rgba(0, 0, 0, 0.086), 0 10px 10px rgba(0, 0, 0, 0.12); }
 
 .container-infos {
@@ -7860,10 +7864,9 @@ body {
   .container-infos .player,
   .container-infos .ordinateur {
     text-transform: uppercase;
-    padding: 5px 0px;
     margin: 10px;
+    margin-bottom: -2px;
     text-align: center;
-    margin-bottom: 10px;
     font-size: 1.3rem;
     border-radius: 5px;
     border: 3px solid black; }
@@ -7886,18 +7889,17 @@ body {
     text-decoration: underline;
     margin: 0.2em; }
 
-#grid {
-  width: 92%;
+.grid {
+  width: 164px;
+  height: 150px;
+  margin: 10px;
   margin-left: 7px;
-  cursor: pointer;
   border-radius: 5px; }
 
 #container-settings {
-  padding: 10px;
   margin: 15px;
   border: 3px solid black;
   border-radius: 5px;
-  margin-top: 25px;
   background-color: #ece8ed;
   font-size: 1.2rem; }
 
@@ -7909,7 +7911,7 @@ body {
     margin-right: 10px; }
   .options .buttons {
     background-color: white;
-    padding: 5px 50px;
+    padding: 5px 30px;
     border-radius: 5px;
     color: black;
     margin: 15px;
@@ -7924,5 +7926,22 @@ body {
     background-color: #28a745;
     color: white;
     cursor: pointer; }
+
+#start {
+  position: absolute;
+  left: 44.2%;
+  bottom: 33%;
+  margin: auto;
+  z-index: 3000;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  padding: 70px;
+  border: 3px solid white;
+  cursor: pointer;
+  border-radius: 8px; }
+  #start:hover {
+    background-color: lightslategray; }
 
 /*# sourceMappingURL=app.css.map */
