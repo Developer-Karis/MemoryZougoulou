@@ -7,6 +7,8 @@ let dicoMots = ["accidentelle", "accidentelle", "accidentelle", "accidentelle", 
 let motRandom = generateRandomWord().toUpperCase();
 let recupContainerMain = document.getElementById("container-main");
 
+let scorePlayer = 0;
+
 /**
  * Execute all functions.
  */
@@ -14,7 +16,6 @@ function game() {
     startGame();
     buttonsActive();
     buttonPlay();
-    scorePlayer();
     randomCards();
 }
 
@@ -29,9 +30,11 @@ function startGame() {
         recupContainerMain.style.display = "flex";
         recupContainerMain.style.justifyContent = "center";
         recupContainerMain.style.alignItems = "center";
-        document.getElementById(i).innerHTML += "<img class=grid src='src/images/empty.jpg'/> " + "</img > ";
+        document.getElementById(i).innerHTML += "<img class=\"grid\"" + "\ src='src/images/empty.jpg'/>" + "</img>";
+        document.getElementById(i).innerHTML += "<img id=\"card-" + i + "\" class=grid-item>" + "</img>";
         newSpan.innerHTML += "<span id=\"" + i + "\">" + tirets + "</span>";
     }
+    document.getElementById("scorePlayer").innerHTML = scorePlayer;
 }
 
 /**
@@ -77,19 +80,9 @@ function buttonPlay() {
 function randomCards() {
     let recupGridItem = document.getElementsByClassName('grid');
     let result = Math.floor(Math.random() * recupGridItem.length);
-    $(document).on('click', '.grid-item', function () {
-        for (let i = 0; i < recupGridItem.length; i++) {
-            recupGridItem[i].src = "src/images/cartes/image" + i + ".jpg";
-        }
+    $(document).on('click', '.grid', function () {
+        $(this).attr("src", "src/images/cartes/image" + result + ".jpg");
     })
-}
-
-/**
- * Display the score for current Player.
- */
-function scorePlayer() {
-    let scorePlayer = 0;
-    document.getElementById("scorePlayer").innerHTML = scorePlayer;
 }
 
 /**
