@@ -31,14 +31,16 @@
     <section class="main">
         <!-- Section Main -->
         <div id="container-timer">
-            <div class="row mt-3 mb-2">
+            <div class="row">
                 <div class="col">
                     <h1 class="mr-4"><img src="./src/images/timer.gif" width="120" class="mb-3">Timer</h1>
                     <span id="timer">00 : 00 : 00</span>
                 </div>
-                <img id="fun" src="./src/images/gif funny.gif" width="300" style="border: 10px double black;">
+                <div>
+                    <img id="fun" src="./src/images/gif funny.gif" width="300">
+                </div>
                 <div class="col">
-                    <h1 class="mt-3"><img src="./src/images/search-word.jpg" width="65" class="mb-4 mr-2"> Mot</h1>
+                    <h1 class="mt-3"><img src="./src/images/search-word.jpg" width="65" class="mb-3 mr-3"> Mot</h1>
                     <div id="mettreMot"></div>
                 </div>
             </div>
@@ -46,12 +48,12 @@
         <div class="container-infos">
             <div class="row">
                 <div class="col player">
-                    <h1>player</h1>
+                    <h1>joueur</h1>
                     <span>Paires : <span id="scorePlayer"></span></span>
                 </div>
                 <div class="col ordinateur">
                     <h1>ordinateur</h1>
-                    <span>Paires : </span>
+                    <span>Paires : <span id="scoreOrdinateur"></span></span>
                 </div>
             </div>
         </div>

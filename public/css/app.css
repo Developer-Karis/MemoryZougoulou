@@ -7831,7 +7831,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -5px; }
+  margin: 15px;
+  background-color: #17a2b8;
+  border: 3px solid black;
+  border-radius: 5px; }
   #container-timer h1 {
     font-size: 1.8rem;
     margin-bottom: -10px; }
@@ -7841,19 +7844,25 @@ body {
     align-items: center;
     text-align: center;
     width: 100%; }
+  #container-timer .col {
+    border: 3px solid black;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ece8ed; }
   #container-timer .col img {
     mix-blend-mode: multiply; }
 
 #timer {
-  font-size: 1.7rem; }
+  font-size: 1.6rem; }
 
 .main {
   background-color: lightblue;
   width: 60%;
   margin: auto;
   border: 4px solid black;
-  margin-top: 15px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 10.3px 10.9px rgba(0, 0, 0, 0.072), 0 10.8px 10.4px rgba(0, 0, 0, 0.086), 0 10px 10px rgba(0, 0, 0, 0.12); }
+  border-radius: 5px;
+  margin-top: 15px; }
 
 .container-infos {
   display: flex;
@@ -7865,12 +7874,16 @@ body {
   .container-infos .ordinateur {
     text-transform: uppercase;
     margin: 10px;
-    margin-bottom: -2px;
+    margin-bottom: -1px;
+    margin-top: -1px;
     text-align: center;
     font-size: 1.3rem;
     border-radius: 5px;
-    border: 3px solid black; }
+    border: 3px solid black;
+    padding: 5px; }
   .container-infos .player {
+    overflow: hidden;
+    position: relative;
     background-color: lightcoral; }
     .container-infos .player span {
       color: white;
@@ -7880,21 +7893,66 @@ body {
     .container-infos .ordinateur span {
       color: white;
       text-transform: capitalize; }
+  .container-infos .player::before,
+  .container-infos .player::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 3px solid transparent;
+    width: 0;
+    height: 0; }
+  .container-infos .player::before {
+    top: 0;
+    left: 0;
+    border-top-color: aquamarine;
+    border-right-color: aquamarine;
+    animation: border 2s infinite; }
+  .container-infos .player::after {
+    bottom: 0;
+    right: 0;
+    animation: border 2s 1s infinite, borderColor 2s 1s infinite; }
   .container-infos h1 {
     font-size: 1.5rem; }
 
+@keyframes border {
+  0% {
+    width: 0;
+    height: 0; }
+  25% {
+    width: 100%;
+    height: 0; }
+  50% {
+    width: 100%;
+    height: 100%; }
+  100% {
+    width: 100%;
+    height: 100%; } }
+@keyframes borderColor {
+  0% {
+    border-bottom-color: aquamarine;
+    border-left-color: aquamarine; }
+  50% {
+    border-bottom-color: aquamarine;
+    border-left-color: aquamarine; }
+  51% {
+    border-bottom-color: transparent;
+    border-left-color: transparent; }
+  100% {
+    border-bottom-color: transparent;
+    border-left-color: transparent; } }
 #mettreMot {
-  font-size: 2rem; }
+  font-size: 1.6rem; }
   #mettreMot span {
     text-decoration: underline;
     margin: 0.2em; }
 
 .grid {
-  width: 164px;
+  width: 165px;
   height: 150px;
   margin: 10px;
   margin-left: 7px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border: 2px solid black; }
 
 #container-settings {
   margin: 15px;
@@ -7911,7 +7969,7 @@ body {
     margin-right: 10px; }
   .options .buttons {
     background-color: white;
-    padding: 5px 30px;
+    padding: 2px 40px;
     border-radius: 5px;
     color: black;
     margin: 15px;
@@ -7929,19 +7987,21 @@ body {
 
 #start {
   position: absolute;
-  left: 44.2%;
-  bottom: 33%;
-  margin: auto;
+  left: 44.5%;
+  bottom: 31.5%;
   z-index: 3000;
   text-align: center;
   font-size: 1.5rem;
   color: white;
   background-color: black;
-  padding: 70px;
+  padding: 65px;
   border: 3px solid white;
   cursor: pointer;
   border-radius: 8px; }
   #start:hover {
     background-color: lightslategray; }
+
+#fun {
+  border: 10px double black; }
 
 /*# sourceMappingURL=app.css.map */

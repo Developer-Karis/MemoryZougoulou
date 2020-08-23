@@ -2,12 +2,13 @@
 
 // Variables Globales
 
-let dicoMots = ["accidentelle", "accidentelle", "accidentelle", "accidentelle", "accidentelle", "accidentelle", "accidentelle"];
+let dicoMots = ["ACCELERATEUR", "ACCELERATEUR", "ACCELERATEUR"];
 
 let motRandom = generateRandomWord().toUpperCase();
 let recupContainerMain = document.getElementById("container-main");
 
-let scorePlayer = 0;
+let scorePlayer = 0;        // Score Player
+let scoreOrdinateur = 0;    // Score Ordinateur
 
 /**
  * Execute all functions.
@@ -33,8 +34,11 @@ function startGame() {
         document.getElementById(i).innerHTML += "<img class=\"grid\"" + "\ src='src/images/empty.jpg'/>" + "</img>";
         document.getElementById(i).innerHTML += "<img id=\"card-" + i + "\" class=grid-item>" + "</img>";
         newSpan.innerHTML += "<span id=\"" + i + "\">" + tirets + "</span>";
+        document.getElementById(i).innerHTML = motRandom.charAt(i);
+
     }
     document.getElementById("scorePlayer").innerHTML = scorePlayer;
+    document.getElementById("scoreOrdinateur").innerHTML = scoreOrdinateur;
 }
 
 /**
@@ -45,6 +49,7 @@ function buttonsActive() {
         $(this).addClass('active').siblings().removeClass('active');
         if (document.getElementsByClassName('active')[0].innerHTML == "ORDINATEUR") {
             document.getElementsByClassName("ordinateur")[0].style.display = "block";
+            document.getElementsByClassName("player")[0].style.display = "block";
             document.getElementsByClassName("row")[1].style.width = "99%";
         } else {
             document.getElementsByClassName("ordinateur")[0].style.display = "none";
@@ -67,10 +72,20 @@ function buttonsActive() {
  */
 function buttonPlay() {
     recupContainerMain.style.opacity = "50%";
+
+    // Disabled click grid item
+    $('.grid').click(function () {
+        this.disabled = true;
+    });
+
     $(document).on('click', '#start', function () {
         $(this).attr("hidden", true);
         $('.grid').css('cursor', 'pointer');
         recupContainerMain.style.opacity = "1";
+        // Enabled click grid item
+        $('.grid').click(function () {
+            this.disabled = false;
+        });
     })
 }
 
