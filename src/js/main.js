@@ -10,6 +10,11 @@ let recupContainerMain = document.getElementById("container-main");
 let scorePlayer = 0;        // Score Player
 let scoreOrdinateur = 0;    // Score Ordinateur
 
+let minutesLabel = document.getElementById("minutes");
+let secondsLabel = document.getElementById("seconds");
+let totalSeconds = 0;
+setInterval(setTime, 1000);
+
 /**
  * Execute all functions.
  */
@@ -34,8 +39,6 @@ function startGame() {
         document.getElementById(i).innerHTML += "<img class=\"grid\"" + "\ src='src/images/empty.jpg'/>" + "</img>";
         document.getElementById(i).innerHTML += "<img id=\"card-" + i + "\" class=grid-item>" + "</img>";
         newSpan.innerHTML += "<span id=\"" + i + "\">" + tirets + "</span>";
-        document.getElementById(i).innerHTML = motRandom.charAt(i);
-
     }
     document.getElementById("scorePlayer").innerHTML = scorePlayer;
     document.getElementById("scoreOrdinateur").innerHTML = scoreOrdinateur;
@@ -87,6 +90,27 @@ function buttonPlay() {
             this.disabled = false;
         });
     })
+}
+
+/**
+ * Update Timer
+ */
+function setTime() {
+    if (document.getElementById("start").hasAttribute("hidden")) {
+        ++totalSeconds;
+        secondsLabel.innerHTML = pad(totalSeconds % 60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    }
+}
+
+function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    }
+    else {
+        return valString;
+    }
 }
 
 /**
