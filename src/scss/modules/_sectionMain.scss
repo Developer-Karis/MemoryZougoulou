@@ -52,9 +52,10 @@
     margin: auto;
     border: 4px solid black;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
+// Score Player, Ordinateur
 .container-infos {
     display: flex;
     justify-content: center;
@@ -69,7 +70,7 @@
         margin-bottom: -8px;
         margin-top: -8px;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         border-radius: 5px;
         border: 3px solid black;
         padding: 5px;
@@ -112,7 +113,7 @@
         animation: border 2s 1s infinite, borderColor 2s 1s infinite;
     }
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -163,20 +164,22 @@
 }
 
 .grid {
-    width: 165px;
+    width: 160px;
     height: 150px;
-    margin: 10px;
+    margin: 8px;
     margin-left: 7px;
     border-radius: 5px;
     border: 2px solid black;
 }
 
+// Mode de Jeu et Vitesse
 #container-settings {
     margin: 15px;
     border: 3px solid black;
     border-radius: 5px;
     background-color: #ece8ed;
     font-size: 1.2rem;
+    margin-top: -8px;
 }
 
 .options {
@@ -211,14 +214,14 @@
 // Start element to play
 #start {
     position: absolute;
-    left: 44.5%;
-    bottom: 31.5%;
+    left: 44.6%;
+    bottom: 35.5%;
     z-index: 3000;
     text-align: center;
     font-size: 1.5rem;
     color: white;
     background-color: black;
-    padding: 65px;
+    padding: 60px;
     border: 3px solid white;
     cursor: pointer;
     border-radius: 8px;

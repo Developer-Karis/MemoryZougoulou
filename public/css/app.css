@@ -7862,7 +7862,7 @@ body {
   margin: auto;
   border: 4px solid black;
   border-radius: 5px;
-  margin-top: 15px; }
+  margin-top: 20px; }
 
 .container-infos {
   display: flex;
@@ -7877,7 +7877,7 @@ body {
     margin-bottom: -8px;
     margin-top: -8px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     border: 3px solid black;
     padding: 5px; }
@@ -7912,7 +7912,7 @@ body {
     right: 0;
     animation: border 2s 1s infinite, borderColor 2s 1s infinite; }
   .container-infos h1 {
-    font-size: 1.5rem; }
+    font-size: 1.3rem; }
 
 @keyframes border {
   0% {
@@ -7947,9 +7947,9 @@ body {
     margin: 0.2em; }
 
 .grid {
-  width: 165px;
+  width: 160px;
   height: 150px;
-  margin: 10px;
+  margin: 8px;
   margin-left: 7px;
   border-radius: 5px;
   border: 2px solid black; }
@@ -7959,7 +7959,8 @@ body {
   border: 3px solid black;
   border-radius: 5px;
   background-color: #ece8ed;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  margin-top: -8px; }
 
 .options {
   display: flex;
@@ -7987,14 +7988,14 @@ body {
 
 #start {
   position: absolute;
-  left: 44.5%;
-  bottom: 31.5%;
+  left: 44.6%;
+  bottom: 35.5%;
   z-index: 3000;
   text-align: center;
   font-size: 1.5rem;
   color: white;
   background-color: black;
-  padding: 65px;
+  padding: 60px;
   border: 3px solid white;
   cursor: pointer;
   border-radius: 8px; }
