@@ -80,6 +80,7 @@ function buttonPlay() {
         this.disabled = true;
     });
 
+    // When user click on button Start
     $(document).on('click', '#start', function () {
         $(this).attr("hidden", true);
         $('.grid').css('cursor', 'pointer');
@@ -89,6 +90,8 @@ function buttonPlay() {
             this.disabled = false;
         });
     })
+    document.getElementById("card-0").src = "src/images/cartes/image0.jpg";
+    document.getElementById("card-1").src = "src/images/cartes/image0.jpg";
 }
 
 /**
@@ -117,38 +120,8 @@ function pad(val) {
  */
 function randomCards() {
     let recupGridItem = document.getElementsByClassName('grid');
-    let randomCards1 = Math.round(Math.random() * recupGridItem.length);
-    let randomCards2 = Math.round(Math.random() * recupGridItem.length);
-    let lettreAleatoire1 = Math.round(Math.random() * motRandom.length);
-    let lettreAleatoire2 = Math.round(Math.random() * motRandom.length);
-    document.getElementById(lettreAleatoire1).innerHTML = motRandom.charAt(lettreAleatoire1);
-    document.getElementById(lettreAleatoire2).innerHTML = motRandom.charAt(lettreAleatoire2);
-    if (lettreAleatoire1 == lettreAleatoire2) {
-        console.log("Meme tirage");
-    }
-    let displayCard1;
-    let displayCard2;
-    // Display Card When you click on this element
-    $(document).on('click', '#card-' + randomCards1, function () {
-        displayCard1 = document.getElementById("card-" + randomCards1).src = "src/images/cartes/image" + randomCards1 + ".jpg";
-        if (displayCard1 == displayCard2) {
-            document.getElementById("card-" + randomCards1).style.opacity = "50%";
-            document.getElementById("card-" + randomCards2).style.opacity = "50%";
-        } else {
-            document.getElementById("card-" + randomCards1).src = "src/images/empty.jpg";
-            document.getElementById("card-" + randomCards2).src = "src/images/empty.jpg";
-        }
-    })
-    $(document).on('click', '#card-' + randomCards2, function () {
-        displayCard2 = document.getElementById("card-" + randomCards2).src = "src/images/cartes/image" + randomCards1 + ".jpg";
-        if (displayCard1 == displayCard2) {
-            document.getElementById("card-" + randomCards1).style.opacity = "50%";
-            document.getElementById("card-" + randomCards2).style.opacity = "50%";
-        } else {
-            document.getElementById("card-" + randomCards1).src = "src/images/empty.jpg";
-            document.getElementById("card-" + randomCards2).src = "src/images/empty.jpg";
-        }
-    });
+    let random = Math.floor(Math.random() * recupGridItem.length);
+    return random;
 }
 
 /**
